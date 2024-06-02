@@ -1,0 +1,78 @@
+/* Primary button style */
+
+.btn-primary {
+    font-family: "Montserrat", sans-serif;
+    padding-top: 10px; /* Top padding of 10px */
+    padding-bottom: 10px; /* Bottom padding of 10px */
+    padding-right: 20px; /* Right padding of 20px */
+    padding-left: 20px; /* Left padding of 20px */
+    background-color: #25a2de; /* Blue */
+    color: #fff;
+    font-size: 16px; /* Font size for primary button */
+    border-radius: 50px;
+    line-height: 1em;
+    transition: 0.4s ease-in-out;
+}
+
+/* Hover styles */
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+    color: #fff;
+}
+
+/* Outline button style */
+.btn-outline {
+    font-family: "Montserrat", sans-serif;
+    padding-top: 10px; /* Top padding of 10px */
+    padding-bottom: 10px; /* Bottom padding of 10px */
+    padding-right: 20px; /* Right padding of 20px */
+    padding-left: 20px; /* Left padding of 20px */
+    background-color: transparent;
+    border: 2px solid #25a2de; /* Blue border */
+    color: #25a2de; /* Blue text */
+    font-size: 16px; /* Font size for outline button */
+    border-radius: 50px;
+    line-height: 1em;
+    transition: 0.4s ease-in-out;
+}
+
+/* Hover styles */
+.btn-outline:hover {
+    background-color: #25a2de; /* Blue background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 980px) {
+    .btn-primary {
+        font-size: 14px; /* Font size for primary button on smaller screens */
+        padding-top: 8px; /* Top padding of 8px */
+        padding-bottom: 8px; /* Bottom padding of 8px */
+        padding-right: 16px; /* Right padding of 16px */
+        padding-left: 16px; /* Left padding of 16px */
+    }
+    .btn-outline {
+        font-size: 14px; /* Font size for outline button on smaller screens */
+        padding-top: 8px; /* Top padding of 8px */
+        padding-bottom: 8px; /* Bottom padding of 8px */
+        padding-right: 16px; /* Right padding of 16px */
+        padding-left: 16px; /* Left padding of 16px */
+    }
+}
+
+@media (max-width: 767px) {
+    .btn-primary {
+        font-size: 12px; /* Font size for primary button on even smaller screens */
+        padding-top: 6px; /* Top padding of 6px */
+        padding-bottom: 6px; /* Bottom padding of 6px */
+        padding-right: 12px; /* Right padding of 12px */
+        padding-left: 12px; /* Left padding of 12px */
+    }
+    .btn-outline {
+        font-size: 12px; /* Font size for outline button on even smaller screens */
+        padding-top: 6px; /* Top padding of 6px */
+        padding-bottom: 6px; /* Bottom padding of 6px */
+        padding-right: 12px; /* Right padding of 12px */
+        padding-left: 12px; /* Left padding of 12px */
+    }
+}

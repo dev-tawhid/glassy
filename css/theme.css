@@ -1,0 +1,456 @@
+/* Global Settings */
+
+body{
+    background: #ffffff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cmn-section{
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.heading-section{
+  background: #ffeded;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+/* Container setup */
+
+.container{
+    max-width: 1366px;
+    width: 90%;
+    margin: auto;
+}
+
+
+.mw-100{
+    max-width: 100%;
+}
+
+
+
+
+  /* extend-wp-header-style-1 start */
+
+
+  #logo{
+    max-width: 200px;
+  }
+
+  #header-main{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+
+  .logo-area{
+    display: flex;
+    align-items: center;
+    max-width: 27%;
+  }
+
+  .logo-area a{
+    display: flex;
+    align-items: center;
+  }
+
+  #header-main.glassy-header-style-1 .nav-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 100px;
+  }
+
+  #header-main ul{
+    list-style: none;
+  }
+
+  #header-main.glassy-header-style-1 .nav-main .nav{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  #header-main li a{
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition:0.4s ease-in-out;
+  }
+  #header-main li{
+    padding-top: 8px;
+  padding-bottom: 8px;
+  }
+
+  #header-main.glassy-header-style-1 .nav-main .nav li a{
+    position: relative;
+  }
+
+  #header-main.glassy-header-style-1 .nav-main .nav li a:hover{
+    color: #25A4E1;
+  }
+
+
+
+  /* Submenu style fist Layer */
+
+  #header-main.glassy-header-style-1 .nav-main ul li {
+    position: relative;
+  }
+
+  #header-main.glassy-header-style-1 .nav-main ul li ul{
+    display: none!important;
+  }
+
+
+  #header-main.glassy-header-style-1  .sub-menu{
+    padding: 10px 20px;
+    min-width: 180px;
+    background: rgba(255, 255, 255, 0.7);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+  }
+
+  #header-main.glassy-header-style-1 .nav-main ul li > ul{
+    position: absolute;
+    top: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  @media (min-width: 981px){
+    #header-main.glassy-header-style-1 .nav-main ul li:hover > ul{
+      display: flex!important;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main ul li ul li:hover > ul{
+      display: flex!important;
+    }
+  }
+
+    /* Submenu style 2nd Layer */
+
+    
+      #header-main.glassy-header-style-1 .nav-main ul li ul li ul{
+        display: none!important;
+      }
+    
+     
+    
+      #header-main.glassy-header-style-1 .nav-main ul li ul li > ul{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #header-main.glassy-header-style-1 .menu-item-has-children > a::after{
+        content: "\f078"; /* Unicode for Font Awesome chevron-down */
+        font-family: 'Font Awesome 6 Free'; /* Make sure Font Awesome 6 Free is loaded */
+        font-weight: 900; /* Use the appropriate weight for the icon */
+        font-size: 15px;
+        padding-left: 5px;
+      }
+
+  /* Header button style */
+
+  #header-main .header-btn{
+    padding-top: 0!important;
+    padding-bottom:0!important;
+  }
+  
+  #header-main .header-btn a{
+    background: #DCA93A;
+    padding-top: 13px!important;
+    padding-bottom: 13px!important;
+    padding-right: 30px!important;
+    padding-left: 30px!important;
+    color: #fff !important;
+    border-radius: 50px;
+    font-weight: 500;
+    transition:0.4s ease-in-out;
+    display: inline-block;
+  }
+
+  #header-main .header-btn a:hover{
+    background: #004B80;
+    color: #fff;
+  }
+
+  #header-main .header-btn a::before,
+  #header-main .header-btn a::after{
+    display: none;
+  }
+
+
+
+  /* Hamburger  */
+
+
+  .hamburger{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+
+  /* Header Media query */
+
+  @media (max-width: 980px){
+
+    .logo-area{
+      max-width: 50%;
+    }
+
+
+    /* Font size   */
+
+    #header-main li a {
+      font-size: 16px;
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    #header-main.glassy-header-style-1 .menu-item-has-children > a::after {
+    
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+    }
+
+    #header-main li a::before{
+      display: none!important;
+    }
+
+    #header-main li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+
+    /* Responsive header padding  */
+
+    #header-main.glassy-header-style-1 .nav-main {
+      padding-bottom: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    .menu-area{
+      display: none;
+    }
+
+    .hamburger{
+      display: block;
+    }
+
+    .nav-opened .hamburger{
+      rotate: 90deg;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main{
+      position: relative;
+    }
+
+    .menu-area{
+      position: absolute;
+      top: 100%;
+      position: absolute;
+      background: #ffffff;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 0px 0px 50px 50px;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main .nav {
+      display: flex;
+      gap: 0px;
+      align-items: start;
+      /* padding: 0 20px 20px; */
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 30px;
+      flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main ul li {
+      display: block;
+      width: 100%;
+    }
+
+    #header-main.glassy-header-style-1  .nav-opened {
+      border-radius: 50px 50px 0 0px;
+    }
+
+
+    /* Responsive Submenu  */
+
+    .sub-menu{
+      margin-top: 15px;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main ul li > ul {
+      position: relative;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main ul li ul li > ul {
+      position: relative;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main ul li ul {
+      /* display: flex !important; */
+      display: none; 
+     flex-direction: column;
+    }
+
+    #header-main.glassy-header-style-1 .nav-main ul li ul li ul {
+      display: none;
+      flex-direction: column;
+      left: 0;
+    }
+
+    #header-main.glassy-header-style-1 .sub-menu{
+      display: none;
+    }
+
+    #header-main.glassy-header-style-1 .sub-menu.active{
+      display: flex!important; 
+  }
+
+
+    /* Header Button   */
+
+    #header-main .header-btn a {
+      display: block;
+      text-align: center;
+    }
+
+  }
+
+
+  /* Header section  */
+
+  .hero-section img{
+    height: 85vh;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 10px solid #25A4E1;
+    border-radius: 0px 0px 6em 6em;
+  }
+
+
+  /* article styles */
+
+  .article-container {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+/* four-column layout */
+.article-container.four-columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Three-column layout */
+.article-container.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Two-column layout */
+.article-container.two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* One-column layout */
+.article-container.one-column {
+  grid-template-columns: 1fr;
+}
+
+.article-wrap .post-item{
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    box-shadow: 0 -12px 38px rgba(0, 0, 0, 0.1);/* Subtle shadow */
+    border-bottom: 10px solid #25A4E1;
+    border-radius: 2em;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+
+
+
+/* Article End  */
+
+
+
+/* Footer style  */
+
+
+#glassy-footer{  
+  background: #2978e1;
+  border-top: 10px solid #25a4e1;
+  border-radius: 6em 6em 0px 0px; 
+}
+
+#glassy-footer p{
+  color: #ffeddd;
+}
+
+.footer-title{
+  color: #ffeddd;
+}
+
+
+/* Footer End  */
+
+
+
+
+
+
+
+
+

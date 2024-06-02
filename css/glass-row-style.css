@@ -1,0 +1,36 @@
+
+.row{
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+/* One-column layout */
+.row.col-1 {
+grid-template-columns: 1fr;
+}
+
+/* Two-column layout */
+.row.col-2{
+grid-template-columns: repeat(2, 1fr);
+}
+
+/* Three-column layout */
+.row.col-3 {
+grid-template-columns: repeat(3, 1fr);
+}
+
+/* four-column layout */
+.row.col-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* four-column layout */
+.row.col-5{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* four-column layout */
+.row.col-6{
+    grid-template-columns: repeat(6, 1fr);
+}

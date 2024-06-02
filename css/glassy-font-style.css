@@ -1,0 +1,141 @@
+
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px; /* Initial font size */
+    color: #333;
+    line-height: 1.4em;
+    letter-spacing: 0;
+}
+
+
+/* link  */
+
+body a{
+    text-decoration: none;
+    color: #25a2df;
+}
+body a:hover{
+    color: #0056b3;
+}
+
+
+/* Standard font styles for each heading */
+body h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    color: #333;
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+
+body h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    color: #333;
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+
+body h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    color: #333;
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+
+body h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: #333;
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+
+body h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+
+body h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.2em;
+    letter-spacing: 0;
+}
+
+/* Media query for max-width 980px */
+@media (max-width: 980px) {
+
+    /* Body font size responsive */
+
+    body {
+        font-size: 16px;
+    }
+
+
+    body h1 {
+        font-size: 32px;
+    }
+
+    body h2 {
+        font-size: 28px;
+    }
+
+    body h3 {
+        font-size: 24px;
+    }
+
+    body h4 {
+        font-size: 20px;
+    }
+
+    body h5 {
+        font-size: 16px;
+    }
+
+    body h6 {
+        font-size: 14px;
+    }
+}
+
+/* Media query for max-width 767px */
+@media (max-width: 767px) {
+
+    /* Body font size responsive */
+
+    body {
+        font-size: 14px;
+    }
+
+
+    body h1 {
+        font-size: 28px;
+    }
+
+    body h2 {
+        font-size: 24px;
+    }
+
+    body h3 {
+        font-size: 20px;
+    }
+
+    body h4 {
+        font-size: 18px;
+    }
+
+    body h5 {
+        font-size: 16px;
+    }
+
+    body h6 {
+        font-size: 14px;
+    }
+}
