@@ -97,7 +97,7 @@
             <div class="article-wrap">
                 <div class="article-container three-columns">
                     <article class="post-item">
-                            <h3 class="post-title">Understanding WordPress Development</h3>
+                            <h3 class="post-title">WordPress Theme</h3>
                             <div class="post-meta">
                                 <span class="post-date">May 31, 2024</span>
                                 <span class="post-author">by Jane Doe</span>
@@ -113,7 +113,7 @@
 
                     </article>
                     <article class="post-item">
-                        <h3 class="post-title">Understanding WordPress Development</h3>
+                        <h3 class="post-title">WordPress Theme</h3>
                         <div class="post-meta">
                             <span class="post-date">May 31, 2024</span>
                             <span class="post-author">by Jane Doe</span>
@@ -129,7 +129,7 @@
 
                 </article>
                 <article class="post-item">
-                    <h3 class="post-title">Understanding WordPress Development</h3>
+                <h3 class="post-title">WordPress Theme</h3>
                     <div class="post-meta">
                         <span class="post-date">May 31, 2024</span>
                         <span class="post-author">by Jane Doe</span>
@@ -145,7 +145,7 @@
 
             </article>
             <article class="post-item">
-                <h3 class="post-title">Understanding WordPress Development</h3>
+            <h3 class="post-title">WordPress Theme</h3>
                 <div class="post-meta">
                     <span class="post-date">May 31, 2024</span>
                     <span class="post-author">by Jane Doe</span>
@@ -162,7 +162,7 @@
         </article>
 
         <article class="post-item">
-            <h3 class="post-title">Understanding WordPress Development</h3>
+            <h3 class="post-title">WordPress Theme</h3>
             <div class="post-meta">
                 <span class="post-date">May 31, 2024</span>
                 <span class="post-author">by Jane Doe</span>
@@ -177,7 +177,7 @@
         <a href="#" class="read-more btn-outline">Read More</a>
 
     </article> <article class="post-item">
-        <h3 class="post-title">Understanding WordPress Development</h3>
+        <h3 class="post-title">WordPress Theme</h3> 
         <div class="post-meta">
             <span class="post-date">May 31, 2024</span>
             <span class="post-author">by Jane Doe</span>
