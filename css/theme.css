@@ -63,6 +63,11 @@ ul{
     max-width: 27%;
   }
 
+  .logo-area .custom-logo{
+    max-width: 200px;
+    height: auto;
+  }
+
   .logo-area a{
     display: flex;
     align-items: center;

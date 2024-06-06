@@ -2,10 +2,23 @@
 
     function glassy_core(){
         add_theme_support( 'title-tag');
+        add_theme_support('custom-logo');
+        add_theme_support('menus');
         
+
     }
 
     add_action('after_setup_theme','glassy_core');
+
+
+    // Register menu locations
+
+        function register_my_menus() {
+            register_nav_menus(array(
+                'primary' => 'Primary Menu'
+            ));
+        }
+        add_action('init', 'register_my_menus');
 
 
 
