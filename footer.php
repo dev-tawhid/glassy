@@ -24,12 +24,6 @@
 <!-- Footer End  -->
 
 
-
-<!-- js -->
-
-<script src="<?php echo get_template_directory_uri()?>/js/theme.js"></script>
-
-
 <?php wp_footer()?>
 
 </body>

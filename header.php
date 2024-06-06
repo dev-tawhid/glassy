@@ -8,20 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Link  -->
-
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/font-awesome/css/all.css">
-
-    <!-- Glassy WordPress Theme CSS files  -->
-
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/glassy-button-style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/glassy-button-style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/glassy-spacing-style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/glass-row-style.css">
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/glassy-font-style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/theme.css">
-
-
     <?php wp_head() ?>
 </head>
 <body <?php body_class()?>>
