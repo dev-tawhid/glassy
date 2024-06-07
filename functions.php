@@ -1,11 +1,20 @@
 <?php
 
     function glassy_core(){
-        add_theme_support( 'title-tag');
-        add_theme_support('custom-logo');
-        add_theme_support('menus');
-        
 
+        // Title Tag
+        add_theme_support('title-tag');
+
+         // Custom Logo
+        add_theme_support('custom-logo');
+
+        // Post Thumbnails (Featured Images)
+        add_theme_support('post-thumbnails');
+
+        // blog image ratio 
+
+        add_image_size('blog-img', 980, 551, true); // (width, height, crop)
+        
     }
 
     add_action('after_setup_theme','glassy_core');
