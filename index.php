@@ -41,7 +41,8 @@
                             </div>
                         <div class="post-content">
                             <p class="post-excerpt">
-                               <?php the_excerpt()?>
+                            <?php echo wp_trim_words(get_the_excerpt(), 25); // Limiting to 20 words ?>
+                            </p>
                             </p>
                         </div>
                         <a href="<?php the_permalink()?>" class="read-more btn-outline">Read More</a>
