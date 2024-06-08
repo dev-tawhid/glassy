@@ -18,12 +18,7 @@
         <div class="container">
             <div class="nav-main">
                 <div class="logo-area">
-                    <!-- <a href="#">
-                        <img id="logo" src="<?php echo get_template_directory_uri()?>/img/logo.png" alt="Logo">
-                    </a> -->
-
                     <?php the_custom_logo()?>
-                    
                 </div>
                 <div class="menu-area">
                     <?php 

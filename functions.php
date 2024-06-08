@@ -1,6 +1,8 @@
 <?php
 
-    function glassy_core(){
+    function glassy_bootstrapping(){
+
+        load_theme_textdomain('glassy');
 
         // Title Tag
         add_theme_support('title-tag');
@@ -12,12 +14,12 @@
         add_theme_support('post-thumbnails');
 
         // blog image ratio 
-
         add_image_size('blog-img', 980, 551, true); // (width, height, crop)
+        
         
     }
 
-    add_action('after_setup_theme','glassy_core');
+    add_action('after_setup_theme','glassy_bootstrapping');
 
 
     // Register menu locations

@@ -38,12 +38,9 @@ ul{
     margin: auto;
 }
 
-
 .mw-100{
     max-width: 100%;
 }
-
-
 
 
   /* extend-wp-header-style-1 start */
@@ -54,12 +51,12 @@ ul{
   }
 
   #header-main{
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    /* top: 30px; */
     left: 0;
     right: 0;
-    bottom: 0;
     margin-top: 30px;
+    z-index: 99999999;
   }
 
 
@@ -396,25 +393,7 @@ ul{
     grid-row-gap: 30px;
 }
 
-/* four-column layout */
-.article-container.four-columns {
-  grid-template-columns: repeat(4, 1fr);
-}
 
-/* Three-column layout */
-.article-container.three-columns {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Two-column layout */
-.article-container.two-columns {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* One-column layout */
-.article-container.one-column {
-  grid-template-columns: 1fr;
-}
 
 .article-wrap .post-item{
   background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
@@ -456,6 +435,82 @@ ul{
 
 
 /* Footer End  */
+
+
+
+/* Article style  */
+
+.article-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+
+/* Blog pagination style  */
+
+/* Center the pagination container */
+.nav-links {
+  text-align: center;
+}
+
+/* Style the pagination items */
+.nav-links .page-numbers,
+.nav-links .prev.page-numbers {
+  display: inline-block;
+  padding: 4px 25px;
+  margin: 0 5px;
+  border: 1px solid #25a2de;
+  border-radius: 25px; /* Rounded border radius */
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for pagination items */
+.nav-links .page-numbers:hover,
+.nav-links .prev.page-numbers:hover {
+  background-color: #25a2de; /* Same background color as active state */
+  border-color: #25a2de; /* Same border color as active state */
+  color: #fff;
+}
+
+/* Active state for the current page */
+.nav-links .page-numbers.current {
+  background-color: #25a2de;
+  border-color: #25a2de;
+  color: #fff;
+}
+
+
+
+/* Page Header style  */
+
+#glassy-page-header{
+  background: #2978e1;
+  border-bottom: 10px solid #25a4e1;
+  border-radius:  0px 0px 6em 6em;
+}
+
+#glassy-page-header .glassy-header-wrap{
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 40px;
+}
+
+#glassy-page-header .glass-header-title{
+  color: #ffeddd;
+  text-align: center;
+}
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,8 @@
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    max-width: 100%;
+    overflow: scroll;
 }
 
 /* One-column layout */
