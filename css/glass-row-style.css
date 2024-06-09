@@ -36,3 +36,10 @@ grid-template-columns: repeat(3, 1fr);
 .row.col-6{
     grid-template-columns: repeat(6, 1fr);
 }
+
+
+/* 70% left and 30% right column */
+
+.row.col-7-3{
+    grid-template-columns: 7fr 3fr;
+}
