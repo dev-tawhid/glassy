@@ -1,22 +1,18 @@
 <?php
 
     function glassy_bootstrapping(){
-
         load_theme_textdomain('glassy');
-
-        // Title Tag
         add_theme_support('title-tag');
-
-         // Custom Logo
         add_theme_support('custom-logo');
-
-        // Post Thumbnails (Featured Images)
         add_theme_support('post-thumbnails');
-
-        // blog image ratio 
+       
         add_image_size('blog-img', 980, 551, true); // (width, height, crop)
-        
-        
+
+        $args = array(
+            'default-image'      => get_template_directory_uri() . '/img/hero.jpg'
+        );
+
+        add_theme_support('custom-header', $args);
     }
 
     add_action('after_setup_theme','glassy_bootstrapping');
@@ -70,7 +66,30 @@
             wp_enqueue_script('custom-theme-js', get_theme_file_uri('/js/theme.js'), array(), filemtime(get_theme_file_path('/js/theme.js')), true);
         }
         
-        add_action('wp_enqueue_scripts', 'glassy_styles_and_scripts');
+        add_action('wp_enqueue_scripts', 'glassy_styles_and_scripts', 11);
+
+
+
+   // Hero
+        function glassy_hero(){
+            if (is_front_page()) {
+                if (current_theme_supports('custom-header')) {
+                    $header_image = get_header_image();
+                    ?>
+                    <style>
+                        #hero {
+                            background: url('<?php echo esc_url($header_image); ?>');
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+                    </style>
+                    <?php
+                }
+            }
+        }
+        add_action('wp_head', 'glassy_hero');
+
 
 
 ?>

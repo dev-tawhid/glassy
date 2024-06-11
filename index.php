@@ -2,7 +2,7 @@
 
        <!-- Article Section  -->
 
-       <?php get_template_part('page-header')?>
+       <?php get_template_part('hero')?>
 
        <div class="article-section py-5">
         <div class="container">
@@ -52,7 +52,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Article section end  -->
 

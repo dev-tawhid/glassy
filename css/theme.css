@@ -35,7 +35,8 @@ ul{
 .container{
     max-width: 1366px;
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mw-100{
@@ -404,9 +405,30 @@ ul{
 }
 
 
-
-
 /* Article End  */
+
+
+/* Hero Style  */
+
+#hero{
+  background: #2978e1;
+  height: 80vh;
+  border-bottom: 10px solid #25a4e1;
+  border-radius: 0px 0px 8vw 8vw ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -425,6 +447,14 @@ ul{
 
 .footer-title{
   color: #ffeddd;
+}
+
+#copyright{
+  background: #2978e1;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 
@@ -529,6 +559,9 @@ aside{
   align-self: start;
   gap: 20px;
 }
+
+
+
 
 
 

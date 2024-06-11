@@ -18,8 +18,14 @@
     </div>
 </div>
 
-
 </footer>
+
+
+<div id="copyright" >
+    <div class="container text-center">
+        <p>All Right Reserve Team Glassy</p>
+    </div>
+</div>
 
 <!-- Footer End  -->
 
