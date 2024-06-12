@@ -20,13 +20,31 @@ body a:hover{
     color: #0056b3;
 }
 
+body h1 a,
+body h2 a,
+body h3 a,
+body h4 a,
+body h5 a,
+body h6 a{
+    color: inherit;
+}
+body h1 a:hover,
+body h2 a:hover,
+body h3 a:hover,
+body h4 a:hover,
+body h4 a:hover,
+body h5 a:hover,
+body h6 a:hover{
+    color: inherit;
+}
+
 
 /* Standard font styles for each heading */
 body h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 45px;
     color: #333;
-    line-height: 1.2em;
+    line-height: 1em;
     letter-spacing: 0;
 }
 

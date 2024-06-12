@@ -28,5 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
             subMenu.classList.toggle('active');
         });
     });
-})
+});
+
+
+
+// Make hader last element as button 
+
+document.querySelector('#menu-primary-menu > li:last-child').classList.add('header-btn');
+
+
+
+
+
+
 

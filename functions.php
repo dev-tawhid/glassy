@@ -1,5 +1,10 @@
 <?php
 
+        // Ensure the script is being called within WordPress
+        if ( ! defined( 'ABSPATH' ) ) {
+            exit; // Exit if accessed directly.
+        }
+
     function glassy_bootstrapping(){
         load_theme_textdomain('glassy');
         add_theme_support('title-tag');
@@ -9,7 +14,7 @@
         add_image_size('blog-img', 980, 551, true); // (width, height, crop)
 
         $args = array(
-            'default-image'      => get_template_directory_uri() . '/img/hero.jpg'
+            'default-image'     => get_template_directory_uri() . '/img/hero.jpg'
         );
 
         add_theme_support('custom-header', $args);
@@ -45,10 +50,12 @@
         add_action( 'widgets_init', 'glassy_register_sidebar' );
         
 
-
         function glassy_styles_and_scripts() {
             // Theme version for versioning
             $theme_version = wp_get_theme()->get('Version');
+
+            // Google Fonts 
+            wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
         
             // CSS files with versioning
             wp_enqueue_style('glassy-button', get_theme_file_uri('/css/glassy-button-style.css'), array(), filemtime(get_theme_file_path('/css/glassy-button-style.css')));
@@ -75,6 +82,12 @@
             if (is_front_page()) {
                 if (current_theme_supports('custom-header')) {
                     $header_image = get_header_image();
+
+                    // Check if a custom header image is set, if not, use the default image
+                    if (!$header_image) {
+                        $header_image = get_theme_support('custom-header', 'default-image');
+                    }
+
                     ?>
                     <style>
                         #hero {
@@ -89,8 +102,6 @@
             }
         }
         add_action('wp_head', 'glassy_hero');
-
-
 
 ?>
 
