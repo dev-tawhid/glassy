@@ -23,6 +23,20 @@
     add_action('after_setup_theme','glassy_bootstrapping');
 
 
+    function theme_prefix_custom_logo() {
+        // Check if the custom logo is set
+        if (has_custom_logo()) {
+            // Display the custom logo, which is automatically linked
+            the_custom_logo();
+        } else {
+            // Display the default logo with a link to the home page
+            echo '<a href="' . esc_url(home_url('/')) . '" class="custom-logo" rel="home">';
+            echo '<img src="' . get_template_directory_uri() . '/img/logo.png" alt="' . get_bloginfo('name') . '">';
+            echo '</a>';
+        }
+    }
+
+
     // Register menu locations
 
         function register_my_menus() {

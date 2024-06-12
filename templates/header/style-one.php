@@ -5,7 +5,7 @@
         <div class="container">
             <div class="nav-main">
                 <div class="logo-area">
-                    <?php the_custom_logo()?>
+                    <?php theme_prefix_custom_logo();?>
                 </div>
                 <div class="menu-area">
                     <?php 
