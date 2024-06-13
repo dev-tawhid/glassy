@@ -27,19 +27,36 @@ grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(4, 1fr);
 }
 
-/* four-column layout */
+/* Five-column layout */
 .row.col-5{
     grid-template-columns: repeat(5, 1fr);
 }
 
-/* four-column layout */
+/* Six-column layout */
 .row.col-6{
     grid-template-columns: repeat(6, 1fr);
 }
-
 
 /* 70% left and 30% right column */
 
 .row.col-7-3{
     grid-template-columns: 7fr 3fr;
+}
+
+
+/* Two-column layout for medium screens (max-width: 980px) */
+@media (max-width: 980px) {
+    .row.col-2, .row.col-3, .row.col-4, .row.col-5, .row.col-6 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .row.col-7-3{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* One-column layout for small screens (max-width: 767px) */
+@media (max-width: 767px) {
+    .row.col-1, .row.col-2, .row.col-3, .row.col-4, .row.col-5, .row.col-6 {
+        grid-template-columns: 1fr;
+    }
 }

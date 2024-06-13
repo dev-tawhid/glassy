@@ -60,8 +60,38 @@
                 'before_title'  => '<h2 class="widget-title">',
                 'after_title'   => '</h2>',
             ) );
+
+            register_sidebar(array(
+                'name'          => __( 'Footer Widget 1', 'glassy' ),
+                'id'            => 'footer-widget-1',
+                'description'   => __( 'Widgets in this area will be shown in the first footer column.', 'glassy' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="footer-title">',
+                'after_title'   => '</h3>',
+            ));
+        
+            register_sidebar(array(
+                'name'          => __( 'Footer Widget 2', 'glassy' ),
+                'id'            => 'footer-widget-2',
+                'description'   => __( 'Widgets in this area will be shown in the second footer column.', 'glassy' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="footer-title">',
+                'after_title'   => '</h3>',
+            ));
+        
+            register_sidebar(array(
+                'name'          => __( 'Footer Widget 3', 'glassy' ),
+                'id'            => 'footer-widget-3',
+                'description'   => __( 'Widgets in this area will be shown in the third footer column.', 'glassy' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="footer-title">',
+                'after_title'   => '</h3>',
+            ));
         }
-        add_action( 'widgets_init', 'glassy_register_sidebar' );
+        add_action( 'widgets_init', 'glassy_register_sidebar');
         
 
         function glassy_styles_and_scripts() {
@@ -88,7 +118,6 @@
         }
         
         add_action('wp_enqueue_scripts', 'glassy_styles_and_scripts', 11);
-
 
 
    // Hero
