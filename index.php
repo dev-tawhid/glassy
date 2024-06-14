@@ -2,7 +2,7 @@
 
        <!-- Article Section  -->
 
-       <?php get_template_part('hero')?>
+       <?php get_template_part('/template-parts/hero/hero')?>
 
        <div class="article-section py-5">
         <div class="container">
@@ -41,7 +41,6 @@
                 <?php } ?>
             </div>
 
-       
             <?php the_posts_pagination( array(
                 'mid_size'  => 2,
                 'prev_text' => __( 'Previous', 'textdomain' ),

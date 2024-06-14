@@ -14,13 +14,41 @@
         add_image_size('blog-img', 980, 551, true); // (width, height, crop)
 
         $args = array(
-            'default-image'     => get_template_directory_uri() . '/img/hero.jpg'
+            'default-image'     => get_template_directory_uri() . '/assets/images/hero.jpg'
         );
-
         add_theme_support('custom-header', $args);
     }
 
     add_action('after_setup_theme','glassy_bootstrapping');
+
+
+    function glassy_enqueue_theme_assets() {
+        // Theme version for versioning
+        $theme_version = wp_get_theme()->get('Version');
+
+        // Google Fonts 
+        wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
+    
+        // CSS files with versioning
+        wp_enqueue_style('glassy-button', get_theme_file_uri('/assets/css/glassy-button-style.css'), array(), filemtime(get_theme_file_path('/assets/css/glassy-button-style.css')));
+        wp_enqueue_style('glassy-spacing', get_theme_file_uri('/assets/css/glassy-spacing-style.css'), array(), filemtime(get_theme_file_path('/assets/css/glassy-spacing-style.css')));
+        wp_enqueue_style('glassy-row', get_theme_file_uri('/assets/css/glass-row-style.css'), array(), filemtime(get_theme_file_path('/assets/css/glass-row-style.css')));
+        wp_enqueue_style('glassy-fonts', get_theme_file_uri('/assets/css/glassy-font-style.css'), array(), filemtime(get_theme_file_path('/assets/css/glassy-font-style.css')));
+
+        wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/fonts/font-awesome/css/all.css'), array(), filemtime(get_theme_file_path('/assets/fonts/font-awesome/css/all.css')));
+
+
+        wp_enqueue_style('theme-css', get_theme_file_uri('/assets/css/theme.css'), array(), filemtime(get_theme_file_path('/assets/css/theme.css')));
+    
+        // Main style.css with theme versioning
+        wp_enqueue_style('main-css', get_stylesheet_uri(), array(), $theme_version);
+    
+        // JS files with versioning
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('theme-js', get_theme_file_uri('/assets/js/theme.js'), array(), filemtime(get_theme_file_path('/assets/js/theme.js')), true);
+    }
+    
+    add_action('wp_enqueue_scripts', 'glassy_enqueue_theme_assets', 11);
 
 
     function theme_prefix_custom_logo() {
@@ -31,7 +59,7 @@
         } else {
             // Display the default logo with a link to the home page
             echo '<a href="' . esc_url(home_url('/')) . '" class="custom-logo" rel="home">';
-            echo '<img src="' . get_template_directory_uri() . '/img/logo.png" alt="' . get_bloginfo('name') . '">';
+            echo '<img src="' . get_template_directory_uri() . '/assets/images/logo.png" alt="' . get_bloginfo('name') . '">';
             echo '</a>';
         }
     }
@@ -94,30 +122,7 @@
         add_action( 'widgets_init', 'glassy_register_sidebar');
         
 
-        function glassy_styles_and_scripts() {
-            // Theme version for versioning
-            $theme_version = wp_get_theme()->get('Version');
-
-            // Google Fonts 
-            wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
-        
-            // CSS files with versioning
-            wp_enqueue_style('glassy-button', get_theme_file_uri('/css/glassy-button-style.css'), array(), filemtime(get_theme_file_path('/css/glassy-button-style.css')));
-            wp_enqueue_style('glassy-spacing', get_theme_file_uri('/css/glassy-spacing-style.css'), array(), filemtime(get_theme_file_path('/css/glassy-spacing-style.css')));
-            wp_enqueue_style('glassy-row', get_theme_file_uri('/css/glass-row-style.css'), array(), filemtime(get_theme_file_path('/css/glass-row-style.css')));
-            wp_enqueue_style('glassy-fonts', get_theme_file_uri('/css/glassy-font-style.css'), array(), filemtime(get_theme_file_path('/css/glassy-font-style.css')));
-            wp_enqueue_style('font-awesome', get_theme_file_uri('/font-awesome/css/all.css'), array(), filemtime(get_theme_file_path('/font-awesome/css/all.css')));
-            wp_enqueue_style('glassy-theme-css', get_theme_file_uri('/css/theme.css'), array(), filemtime(get_theme_file_path('/css/theme.css')));
-        
-            // Main style.css with theme versioning
-            wp_enqueue_style('style_css', get_stylesheet_uri(), array(), $theme_version);
-        
-            // JS files with versioning
-            wp_enqueue_script('jquery');
-            wp_enqueue_script('custom-theme-js', get_theme_file_uri('/js/theme.js'), array(), filemtime(get_theme_file_path('/js/theme.js')), true);
-        }
-        
-        add_action('wp_enqueue_scripts', 'glassy_styles_and_scripts', 11);
+     
 
 
    // Hero
@@ -130,7 +135,6 @@
                     if (!$header_image) {
                         $header_image = get_theme_support('custom-header', 'default-image');
                     }
-
                     ?>
                     <style>
                         #hero {

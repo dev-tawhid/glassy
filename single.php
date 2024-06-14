@@ -2,7 +2,7 @@
 
        <!-- Article Section  -->
 
-       <?php get_template_part('single-header')?>
+       <?php get_template_part('/template-parts/single/single-header')?>
 
        <div class="article-section py-5">
         <div class="container">

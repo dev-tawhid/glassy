@@ -8,8 +8,6 @@
                 <?php bloginfo('description')?>
             </h2>
             <a class="glassy-hero-btn" href="#">Learn More</a> 
-
         </div>
-    
     </div>   
  </div>

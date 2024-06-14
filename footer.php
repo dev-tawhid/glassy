@@ -23,29 +23,27 @@ if ( $has_active_widget ) : ?>
  
  <!-- Footer start  -->
 
-
  <footer id="glassy-footer" class="py-5">
 
-<div class="container row col-3">
-            <?php if ( is_active_sidebar( 'footer-widget-1' ) ) : ?>
-                <div class="glassy-column">
-                    <?php dynamic_sidebar( 'footer-widget-1' ); ?>
-                </div>
-            <?php endif; ?>
-            <?php if ( is_active_sidebar( 'footer-widget-2' ) ) : ?>
-                <div class="glassy-column">
-                    <?php dynamic_sidebar( 'footer-widget-2' ); ?>
-                </div>
-            <?php endif; ?>
-            <?php if ( is_active_sidebar( 'footer-widget-3' ) ) : ?>
-                <div class="glassy-column">
-                    <?php dynamic_sidebar( 'footer-widget-3' ); ?>
-                </div>
-            <?php endif; ?>
-</div>
+    <div class="container row col-3">
+                <?php if ( is_active_sidebar( 'footer-widget-1' ) ) : ?>
+                    <div class="glassy-column">
+                        <?php dynamic_sidebar( 'footer-widget-1' ); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ( is_active_sidebar( 'footer-widget-2' ) ) : ?>
+                    <div class="glassy-column">
+                        <?php dynamic_sidebar( 'footer-widget-2' ); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ( is_active_sidebar( 'footer-widget-3' ) ) : ?>
+                    <div class="glassy-column">
+                        <?php dynamic_sidebar( 'footer-widget-3' ); ?>
+                    </div>
+                <?php endif; ?>
+    </div>
 
 </footer>
-
 
 <div id="copyright" >
     <div class="container text-center">

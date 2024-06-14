@@ -12,4 +12,4 @@
 </head>
 <body <?php body_class()?>>
 
-<?php get_template_part('templates/header/style-one')?>
+<?php get_template_part('template-parts/header/style-one')?>
