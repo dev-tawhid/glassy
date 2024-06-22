@@ -2,9 +2,9 @@
 
        <!-- Article Section  -->
 
-       <?php get_template_part('/template-parts/single/single-header')?>
+       <?php get_template_part('/template-parts/single/page-header')?>
 
-       <div class="article-section py-5">
+       <div id="content" class="article-section py-6">
         <div class="container">
             <div class="article-wrap article-single-wrap ">
             <div class="article-container row col-7-3">

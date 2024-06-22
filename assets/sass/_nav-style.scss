@@ -1,5 +1,9 @@
 /* Global Settings */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     background: #ffffff;
 }
@@ -123,7 +127,6 @@ ul{
   #header-main.glassy-header-style-1 .nav-main .nav li a:hover{
     color: #25A4E1;
   }
-
 
 
   /* Submenu style fist Layer */
@@ -447,7 +450,7 @@ ul{
 
 #hero .glassy-hero-title{
   color: #2978e1;
-  font-size: 65px ;
+  font-size: 50px ;
 }
 #hero .glassy-hero-tagline{
   color: #000000;
@@ -603,8 +606,6 @@ ul{
 }
 
 
-
-
 /* Sidebar style  */
 
 aside{
@@ -618,23 +619,3 @@ aside{
   align-self: start;
   gap: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
