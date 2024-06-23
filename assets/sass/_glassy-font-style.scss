@@ -1,91 +1,63 @@
 
-
+@import "glassy-theme-preset";
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: $body-font;
     font-size: 18px; /* Initial font size */
-    color: #333;
+    color: $text-color;
     line-height: 1.4em;
     letter-spacing: 0;
 }
 
-
 /* link  */
 
-body a{
+a{
     text-decoration: none;
-    color: #25a2df;
+    color: $link-color;
 }
-body a:hover{
-    color: #0056b3;
+a:hover{
+    color: $link-hover-color;
 }
 
-body h1 a,
-body h2 a,
-body h3 a,
-body h4 a,
-body h5 a,
-body h6 a{
-    color: inherit;
-}
-body h1 a:hover,
-body h2 a:hover,
-body h3 a:hover,
-body h4 a:hover,
-body h4 a:hover,
-body h5 a:hover,
-body h6 a:hover{
-    color: inherit;
+
+// Heading Font 
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading-font;
+    color: $heading-color;
 }
 
 
 /* Standard font styles for each heading */
 body h1 {
-    font-family: "Montserrat", sans-serif;
     font-size: 45px;
-    color: #333;
     line-height: 1em;
     letter-spacing: 0;
 }
 
 body h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 36px;
-    color: #333;
-    line-height: 1.2em;
-    letter-spacing: 0;
+    line-height: 1em;
 }
 
 body h3 {
-    font-family: "Montserrat", sans-serif;
     font-size: 28px;
-    color: #333;
-    line-height: 1.2em;
-    letter-spacing: 0;
+    line-height: 1em;
 }
 
 body h4 {
-    font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    color: #333;
-    line-height: 1.2em;
-    letter-spacing: 0;
+    line-height: 1em;
 }
 
 body h5 {
-    font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    color: #333;
-    line-height: 1.2em;
-    letter-spacing: 0;
+    line-height: 1em;
 }
 
 body h6 {
-    font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    color: #333;
-    line-height: 1.2em;
-    letter-spacing: 0;
+    line-height: 1em;
 }
 
 /* Media query for max-width 980px */
@@ -96,7 +68,6 @@ body h6 {
     body {
         font-size: 16px;
     }
-
 
     body h1 {
         font-size: 32px;

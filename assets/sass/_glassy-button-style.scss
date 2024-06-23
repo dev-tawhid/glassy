@@ -1,3 +1,5 @@
+@import "glassy-theme-preset";
+
 /* Primary button style */
 
 .btn-primary {
@@ -6,7 +8,7 @@
     padding-bottom: 10px; /* Bottom padding of 10px */
     padding-right: 20px; /* Right padding of 20px */
     padding-left: 20px; /* Left padding of 20px */
-    background-color: #25a2de; /* Blue */
+    background-color: $theme-color; /* Blue */
     color: #fff;
     font-size: 16px; /* Font size for primary button */
     border-radius: 50px;
@@ -16,7 +18,7 @@
 
 /* Hover styles */
 .btn-primary:hover {
-    background-color: #0056b3; /* Darker shade of primary color */
+    background-color: $accent-color; /* Darker shade of primary color */
     color: #fff;
 }
 
@@ -28,8 +30,8 @@
     padding-right: 20px; /* Right padding of 20px */
     padding-left: 20px; /* Left padding of 20px */
     background-color: transparent;
-    border: 2px solid #25a2de; /* Blue border */
-    color: #25a2de; /* Blue text */
+    border: 2px solid $theme-color; /* Blue border */
+    color: $theme-color; /* Blue text */
     font-size: 16px; /* Font size for outline button */
     border-radius: 50px;
     line-height: 1em;
@@ -38,7 +40,7 @@
 
 /* Hover styles */
 .btn-outline:hover {
-    background-color: #25a2de; /* Blue background on hover */
+    background-color: $theme-color; /* Blue background on hover */
     color: #fff; /* White text on hover */
 }
 

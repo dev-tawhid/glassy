@@ -1,0 +1,420 @@
+/* CSS Reset / Normalize */
+
+@import "glassy-theme-preset";
+
+// Container 
+
+.container{
+    max-width: 1366px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Universal selector to reset margin, padding, and box-sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set base font styles */
+html {
+    font-family: $body-font;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Block elements display */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+
+/* HTML5 hidden attribute */
+[hidden] {
+    display: none;
+}
+
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Image and media styles */
+img, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form element styles */
+input, button, textarea, select {
+    font: inherit;
+    margin: 0;
+}
+
+/* Anchor styles */
+
+/* Reset quotes for blockquote and q elements */
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+/* Address inconsistencies between browsers for hr elements */
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Remove the default vertical scrollbar in IE */
+body {
+    -ms-overflow-style: scrollbar;
+}
+
+/* Text area resize */
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+/* Reset default button styles */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/* Remove inner border and padding in Firefox */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Set default cursor for disabled elements */
+[disabled] {
+    cursor: default;
+}
+
+/* Reset styles for fieldset and legend */
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal;
+    padding: 0;
+}
+
+/* Ensure links can be broken */
+a {
+    word-wrap: break-word;
+}
+
+/* Reset styles for audio elements */
+audio {
+    display: inline-block;
+}
+
+/* Reset styles for progress element */
+progress {
+    vertical-align: baseline;
+}
+
+/* Reset styles for sub and sup elements */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Remove default border radius for form elements in iOS */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Reset select element styles */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+}
+
+/* Reset button styles */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"] {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Prevent text overflow in preformatted text */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Reset for meter element */
+meter {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Apply a natural box layout model to all elements */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Clearfix hack to clear floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Normalize styles for input[type="range"] */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #ddd;
+    border: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $accent-color;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: $light-color;
+}
+
+/* Enhanced styles for form inputs */
+
+/* Base styles for all form elements */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid $light-color;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus state for form elements */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    border-color: $accent-color;
+}
+
+/* Style for text inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+input[type="tel"],
+textarea {
+    width: 100%;
+}
+
+/* Style for buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    background-color: $accent-color;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: $accent-color;
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+    background-color: $accent-color;
+}
+
+/* Style for checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Custom checkboxes and radio buttons */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    color: #333;
+    user-select: none;
+}
+
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+input[type="checkbox"]:checked + label::after,
+input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Style for select dropdowns */
+select {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+select:focus {
+    border-color: $accent-color;
+}
+
+/* Style for file inputs */
+input[type="file"] {
+    padding: 0.5rem;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+input[type="file"]:focus {
+    outline: none;
+}
+
+/* Style for range inputs */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: $accent-color;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: $accent-color;
+}

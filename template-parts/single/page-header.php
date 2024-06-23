@@ -46,12 +46,29 @@ if (has_post_thumbnail()) {
                     }
                     ?>
             </h1>
-            <div class="post-meta">
-                <span class="post-date"><?php echo get_the_date(); ?></span>
-                <span class="post-author">by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
-                <span class="post-category">Category: <?php echo get_the_category_list(', '); ?></span>
-            </div>
+
+
+            <?php 
+            
+            if(is_single()){
+                while (have_posts()) { the_post();
+                ?>
+                    <div class="post-meta single-meta">
+                        <span class="post-date"><?php echo get_the_date(); ?></span>
+                        <span class="post-author">by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
+                        <span class="post-category">Category: <?php echo get_the_category_list(', '); ?></span>
+                    </div>
+                <?php
+                    }
+                }
+            ?>
+
+            
             <a id="down" class="glassy-hero-btn" href="#down"><i class="fa-solid fa-chevron-down"></i></a>
         </div>
+
+
+
+    
     </div>
 </div>

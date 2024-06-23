@@ -1,21 +1,24 @@
 <?php get_header();?>
 
+
+<?php
+
+$has_active_main_sidebar = is_active_sidebar('main-sidebar');
+$sidebar_class = $has_active_main_sidebar ? 'right-sidebar' : 'no-sidebar';
+
+?>
+
        <!-- Article Section  -->
 
-       <?php get_template_part('/template-parts/single/page-header')?>
+       <?php get_template_part('/template-parts/single/page-header')?> 
 
-       <div id="content" class="article-section py-6">
+       <div id="content" class="article-section py-5">
         <div class="container">
             <div class="article-wrap article-single-wrap ">
-            <div class="article-container row col-7-3">
+            <div class="article-container row <?php echo $sidebar_class;?>">
                 <?php while (have_posts()) { the_post(); ?>
                     <article <?php post_class('post-item'); ?>>
-                        <?php if (has_post_thumbnail()) { ?>
-                            <div class="post-thumbnail">
-                                    <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
-                            </div>
-                        <?php } ?>
-                        
+    
                         <div class="post-content">
                             <?php the_content()?>
                         </div>
@@ -23,13 +26,15 @@
                     </article>
                 <?php } ?>
 
-                <aside>
+               
                 <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-                    <div id="glassy-sidebar" class="glassy-widget-area">
-                        <?php dynamic_sidebar( 'main-sidebar' ); ?>
-                    </div><!-- #sidebar -->
+                    <aside>
+                        <div id="glassy-sidebar" class="glassy-widget-area">
+                            <?php dynamic_sidebar( 'main-sidebar' ); ?>
+                        </div><!-- #sidebar -->
+                    </aside>
                 <?php endif; ?>
-                </aside>
+                
             </div>
 
             </div>

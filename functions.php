@@ -1,17 +1,14 @@
 <?php
 
-// Ensure the script is being called within WordPress
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-function glassy_bootstrapping()
-{
+function glassy_theme_support(){
     load_theme_textdomain('glassy');
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
-
     add_image_size('blog-img', 980, 551, true); // (width, height, crop)
 
     $args = array(
@@ -20,11 +17,10 @@ function glassy_bootstrapping()
     add_theme_support('custom-header', $args);
 }
 
-add_action('after_setup_theme', 'glassy_bootstrapping');
+add_action('after_setup_theme', 'glassy_theme_support');
 
 
-function glassy_enqueue_theme_assets()
-{
+function glassy_theme_assets(){
     // Theme version for versioning
     $theme_version = wp_get_theme()->get('Version');
 
@@ -47,7 +43,7 @@ function glassy_enqueue_theme_assets()
     wp_enqueue_script('theme-js', get_theme_file_uri('/assets/js/theme.js'), array(), filemtime(get_theme_file_path('/assets/js/theme.js')), true);
 }
 
-add_action('wp_enqueue_scripts', 'glassy_enqueue_theme_assets', 11);
+add_action('wp_enqueue_scripts', 'glassy_theme_assets', 11);
 
 
 function theme_prefix_custom_logo()
@@ -67,19 +63,18 @@ function theme_prefix_custom_logo()
 
 // Register menu locations
 
-function register_my_menus()
-{
+function glassy_register_menus(){
+    
     register_nav_menus(array(
         'primary' => 'Primary Menu'
     ));
 }
-add_action('init', 'register_my_menus');
+add_action('init', 'glassy_register_menus');
 
 
 // Register sidebar 
 
-
-function glassy_register_sidebar()
+function glassy_register_sidebars()
 {
     register_sidebar(array(
         'name'          => __('Main Sidebar', 'glassy'),
@@ -121,24 +116,19 @@ function glassy_register_sidebar()
         'after_title'   => '</h3>',
     ));
 }
-add_action('widgets_init', 'glassy_register_sidebar');
-
-
-
+add_action('widgets_init', 'glassy_register_sidebars');
 
 
 // Hero
-function glassy_hero()
-{
+function glassy_hero(){
     if (is_front_page()) {
         if (current_theme_supports('custom-header')) {
             $header_image = get_header_image();
-
             // Check if a custom header image is set, if not, use the default image
             if (!$header_image) {
                 $header_image = get_theme_support('custom-header', 'default-image');
             }
-?>
+        ?>
             <style>
                 #hero {
                     background: url('<?php echo esc_url($header_image); ?>');

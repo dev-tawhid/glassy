@@ -23,7 +23,6 @@ if ( $has_active_widget ) : ?>
  
  <!-- Footer start  -->
 
-
  <footer id="glassy-footer" class="py-5">
 
     <div class="container row col-3">

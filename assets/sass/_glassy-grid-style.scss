@@ -39,8 +39,11 @@ grid-template-columns: repeat(3, 1fr);
 
 /* 70% left and 30% right column */
 
-.row.col-7-3{
+.row.right-sidebar{
     grid-template-columns: 7fr 3fr;
+}
+.row.left-sidebar{
+    grid-template-columns: 3fr 7fr;
 }
 
 
@@ -49,7 +52,10 @@ grid-template-columns: repeat(3, 1fr);
     .row.col-2, .row.col-3, .row.col-4, .row.col-5, .row.col-6 {
         grid-template-columns: repeat(2, 1fr);
     }
-    .row.col-7-3{
+    .row.right-sidebar{
+        grid-template-columns: 1fr;
+    }
+    .row.left-sidebar{
         grid-template-columns: 1fr;
     }
 }

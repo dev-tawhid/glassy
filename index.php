@@ -2,12 +2,17 @@
 
        <!-- Article Section  -->
 
-       <?php get_template_part('/template-parts/hero/hero')?>
-
+    <?php
+      if (is_home() || is_front_page()){
+        get_template_part('/template-parts/hero/hero');
+      }else{
+        get_template_part('/template-parts/single/page-header');
+      }
+    ?>
        <div class="article-section py-5">
         <div class="container">
             <div class="article-wrap">
-            <div class="article-container row col-3">
+            <div class="article-container row col-2">
                 <?php while (have_posts()) { the_post(); ?>
                     <article <?php post_class('post-item'); ?>>
                         <?php if (has_post_thumbnail()) { ?>
@@ -43,8 +48,8 @@
 
             <?php the_posts_pagination( array(
                 'mid_size'  => 2,
-                'prev_text' => __( 'Previous', 'textdomain' ),
-                'next_text' => __( 'Next', 'textdomain' ),
+                'prev_text' => __( '<i class="fa-solid fa-angle-left"></i>', 'textdomain' ),
+                'next_text' => __( '<i class="fa-solid fa-angle-right"></i>', 'textdomain' ),
                 'screen_reader_text' => ''
             ) ); ?>
 
