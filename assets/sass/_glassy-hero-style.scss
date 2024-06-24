@@ -36,11 +36,11 @@
   
   #hero .glassy-hero-title{
     color: #2978e1;
-    font-size: 50px ;
+    font-size: 45px ;
   }
   #hero .glassy-hero-tagline{
     color: #000000;
-    font-size: 40px ;
+    font-size: 35px ;
     font-weight: 400;
   }
   
@@ -64,11 +64,17 @@
 
 //   Glassy Single Page Header style 
 
+
 .single-meta{
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
 }  
+
+
+
+// Hero section Media query 
+
   @media(max-width: 980px){
     #hero .glassy-hero-title{
       font-size: 45px ;

@@ -54,9 +54,9 @@ if (has_post_thumbnail()) {
                 while (have_posts()) { the_post();
                 ?>
                     <div class="post-meta single-meta">
-                        <span class="post-date"><?php echo get_the_date(); ?></span>
-                        <span class="post-author">by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
-                        <span class="post-category">Category: <?php echo get_the_category_list(', '); ?></span>
+                        <span title="Date" class="post-date"><i class="fa-regular fa-clock"></i><?php echo get_the_date(); ?></span>
+                        <span title="Author" class="post-author"><i class="fa-regular fa-user"></i><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
+                        <span title="Categories" class="post-category"><i class="fa-regular fa-folder-closed"></i> <?php echo get_the_category_list(', '); ?></span>
                     </div>
                 <?php
                     }

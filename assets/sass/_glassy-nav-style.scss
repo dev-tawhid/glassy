@@ -122,12 +122,10 @@
 
     /* Submenu style 2nd Layer */
 
-    
       #header-main.glassy-header-style-1 .nav-main ul li ul li ul{
         display: none!important;
       }
     
-     
     
       #header-main.glassy-header-style-1 .nav-main ul li ul li > ul{
         position: absolute;
@@ -175,8 +173,6 @@
   #header-main .header-btn a::after{
     display: none;
   }
-
-
 
   /* Hamburger  */
 
@@ -327,154 +323,3 @@
     }
 
   }
-
-
-
-
-  /* article styles */
-
-.article-wrap .post-item{
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-    border: 1px solid #25A4E1;
-    border-bottom: 10px solid #25A4E1;
-    border-radius: 2em;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-}
-
-.post-thumbnail img{
-  border-radius: 20px;;
-}
-
-
-/* Article End  */
-
-
-
-
-/* Footer style  */
-
-
-#glassy-footer{  
-  background: #2978e1;
-  border-top: 10px solid #25a4e1;
-  border-radius: 8vw 8vw 0px 0px; 
-}
-
-#glassy-footer p{
-  color: #ffeddd;
-}
-
-.footer-title{
-  color: #ffeddd;
-}
-
-#copyright{
-  background: #2978e1;
-  color: #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-
-/* Footer End  */
-
-
-
-/* Article style  */
-
-.article-wrap{
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* Blog pagination style  */
-
-/* Center the pagination container */
-.nav-links {
-  text-align: center;
-}
-
-/* Style the pagination items */
-.nav-links .page-numbers,
-.nav-links .prev.page-numbers {
-  display: inline-block;
-  padding: 4px 25px;
-  margin: 0 5px;
-  border: 1px solid #25a2de;
-  border-radius: 25px; /* Rounded border radius */
-  text-decoration: none;
-  color: #333;
-  transition: all 0.3s ease;
-}
-
-/* Hover effect for pagination items */
-.nav-links .page-numbers:hover,
-.nav-links .prev.page-numbers:hover {
-  background-color: #25a2de; /* Same background color as active state */
-  border-color: #25a2de; /* Same border color as active state */
-  color: #fff;
-}
-
-/* Active state for the current page */
-.nav-links .page-numbers.current {
-  background-color: #25a2de;
-  border-color: #25a2de;
-  color: #fff;
-}
-
-
-
-/* Page Header style  */
-
-#glassy-page-header{
-  background: #2978e1;
-  border-bottom: 10px solid #25a4e1;
-  border-radius:  0px 0px 8vw 8vw;
-}
-
-#glassy-page-header .glassy-header-wrap{
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding-bottom: 40px;
-}
-
-#glassy-page-header .glass-header-title{
-  color: #ffeddd;
-  text-align: center;
-}
-
-
-/* Single page header  */
-
-#glassy-page-header  .glassy-single-header-wrap .post-meta{
-  text-align: center;
-  color: #ffeddd;
-}
-
-#glassy-page-header  .glassy-single-header-wrap .post-meta a{
-  color: #ffeddd;
-  text-decoration: underline;
-}
-
-
-/* Sidebar style  */
-
-aside{
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-  border: 1px solid #25A4E1;
-  border-bottom: 10px solid #25A4E1;
-  border-radius: 2em;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-self: start;
-  gap: 20px;
-}

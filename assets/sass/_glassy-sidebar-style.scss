@@ -1,0 +1,13 @@
+/* Sidebar style  */
+
+aside{
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    border: 1px solid #25A4E1;
+    border-bottom: 10px solid #25A4E1;
+    border-radius: 2em;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 20px;
+  }

@@ -29,7 +29,7 @@ function glassy_theme_assets(){
 
     // Font awesome 
 
-    wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/fonts/font-awesome/css/all.css'), array(), filemtime(get_theme_file_path('/assets/fonts/font-awesome/css/all.css')));
+    wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/fonts/font-awesome/css/fontawesome.min.css'), array(), filemtime(get_theme_file_path('/assets/fonts/font-awesome/css/fontawesome.min.css')));
 
     // All theme css 
 
