@@ -137,7 +137,7 @@
       }
 
       #header-main.glassy-header-style-1 .menu-item-has-children > a::after{
-        content: "\f078"; /* Unicode for Font Awesome chevron-down */
+        content: "\f078";
         font-family: 'Font Awesome 6 Free'; /* Make sure Font Awesome 6 Free is loaded */
         font-weight: 900; /* Use the appropriate weight for the icon */
         font-size: 15px;

@@ -1,9 +1,14 @@
 /* article styles */
 
+
+@import "glassy-theme-preset";
+
+
+
 .article-wrap .post-item{
     background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
       border: 1px solid #25A4E1;
-      border-bottom: 10px solid #25A4E1;
+      border-bottom: 10px solid $accent-color;
       border-radius: 2em;
       padding: 25px;
       display: flex;
@@ -40,8 +45,6 @@
   .post-meta span:last-child{
     margin-right: 0;
   }
-
-
 
   .post-meta i {
     margin-right: 5px;
@@ -82,7 +85,64 @@
     border-color: #25a2de;
     color: #fff;
   }
-  
-  
+
+
+  .article-single-wrap .post-item{
+    display: block;
+  }
+
+
+  // Post single style 
+
+// password protected form style 
+
+.password-protected-form {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto; /* Centers the form horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centers the content inside the form */
+}
+
+.password-protected-message {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+  max-width: 70%;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background-color: $accent-color;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #005177;
+}
+
 
   /* Article End  */

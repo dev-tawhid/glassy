@@ -29,7 +29,7 @@ function glassy_theme_assets(){
 
     // Font awesome 
 
-    wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/fonts/font-awesome/css/fontawesome.min.css'), array(), filemtime(get_theme_file_path('/assets/fonts/font-awesome/css/fontawesome.min.css')));
+    wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/fonts/font-awesome/css/all.css'), array(), filemtime(get_theme_file_path('/assets/fonts/font-awesome/css/all.css')));
 
     // All theme css 
 
@@ -143,4 +143,24 @@ function glassy_hero(){
 }
 add_action('wp_head', 'glassy_hero');
 
+
+
+function glassy_custom_password_form() {
+    $output = '<div class="password-protected-form">
+                    <form action="' . esc_url( site_url( 'wp-login.php?action=postpass' ) ) . '" method="post">
+                        <div class="password-protected-message">' . __( "This content is password protected. To view it, please enter your password below:" ) . '</div>
+                        <div class="form-group">
+                            <input name="post_password" type="password" size="20" maxlength="20" class="password-input" />
+                            <input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" class="submit-button" />
+                        </div>
+                    </form>
+                </div>';
+    return $output;
+}
+add_filter( 'the_password_form', 'glassy_custom_password_form' );
+
+
 ?>
+
+
+
