@@ -145,4 +145,254 @@
 }
 
 
+// Comments form style 
+
+/* Comments Section */
+
+/* Comments Section */
+.comments-area {
+  background-color: #f9f9f9;
+}
+
+.comments-area ul {
+  list-style: none;
+  padding-left: 0;
+}
+.comments-area li{
+  list-style-type: none;
+  list-style: none;
+}
+
+.comments-area >li{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.comments-area .comment {
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.comments-area .comment-author {
+  display: flex;
+  align-items: center;
+}
+
+.comments-area .comment-author img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+}
+
+.comments-area .comment-author .fn {
+  font-weight: bold;
+}
+
+.comments-area .comment-author .says {
+  display: none; /* Remove "says" text */
+}
+
+.comments-area .comment-meta {
+  margin-top: 5px;
+  font-size: 0.875em;
+  color: #777;
+}
+
+.comments-area .comment-body p {
+  margin: 10px 0;
+}
+
+.comments-area .reply a,
+.comments-area .comment .comment-body .comment-buttons a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 1px solid #0073aa;
+  background: #fff;
+  color: #0073aa;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.comments-area .reply a:hover,
+.comments-area .comment .comment-body .comment-buttons a:hover {
+  background: #0073aa;
+  color: #fff;
+}
+
+.comments-area .children {
+  margin-left: 30px;
+  border-left: 2px solid $accent-color;
+  padding-left: 20px;
+}
+
+.comments-area .comment .comment-body {
+  position: relative;
+}
+
+.comments-area .comment .comment-body:hover .comment-buttons {
+  display: flex;
+}
+
+/* Author Box */
+.comment-author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.comment-author-box img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-author-box .author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-author-box .author-details .name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.comment-author-box .author-details .website {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.comment-buttons {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+  gap: 5px;
+}
+
+.comment-buttons a {
+  padding: 5px 10px;
+  border: 1px solid #0073aa;
+  background: #fff;
+  color: #0073aa;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.comment-buttons a:hover {
+  background: #0073aa;
+  border-color: #0073aa;
+  color: #fff;
+}
+
+/* Comment Form */
+#respond {
+  margin-top: 30px;
+}
+
+#respond h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+#respond p {
+  margin-bottom: 15px;
+}
+
+#respond .comment-form-comment textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#respond .comment-form-author input,
+#respond .comment-form-email input,
+#respond .comment-form-url input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#respond .form-submit input[type="submit"] {
+  padding: 10px 20px;
+  border: 1px solid #0073aa;
+  background: #0073aa;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#respond .form-submit input[type="submit"]:hover {
+  background: #005177;
+  border-color: #005177;
+}
+
+
+
+
+// Post author box style 
+
+.author-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #f0f0f1;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.author-avatar {
+  margin-right: 15px;
+}
+
+.author-avatar img {
+  border-radius: 50%;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-title {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #2978e1;
+}
+
+.author-bio {
+  color: #000000;
+}
+
+
+// Related artical 
+
+#related-posts{
+  background: #e8e8e8;
+}
+
+
+
+
+// No Post message 
+
+.info {
+  background-color: #f0f8ff; /* Light blue background */
+  border: 1px solid #b0c4de; /* Light steel blue border */
+  padding: 15px;
+  border-radius: 8px;
+  display: block;
+  color: #333;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
   /* Article End  */

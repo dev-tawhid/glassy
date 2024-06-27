@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <?php
 
 $has_active_main_sidebar = is_active_sidebar('main-sidebar');
@@ -21,12 +20,17 @@ $sidebar_class = $has_active_main_sidebar ? 'right-sidebar' : 'no-sidebar';
                     <article <?php post_class('post-item'); ?>>
 
                         <div class="post-content">
-
-                            <?php
-                            if (post_password_required()) {
+                        
+                        <?php
+                            if ( post_password_required() ) {
                                 echo get_the_password_form();
+                            } elseif ( get_post_status() == 'private' && !current_user_can('read_private_posts') ) {
+                                // Custom message for unauthorized users trying to view private posts
+                                echo '<p>This post is private and only visible to authorized users.</p>';
                             } else {
+                                get_template_part('template-parts/single/author-info');
                                 the_content();
+                                comments_template();
                             }
                             ?>
                         </div>
@@ -50,7 +54,16 @@ $sidebar_class = $has_active_main_sidebar ? 'right-sidebar' : 'no-sidebar';
 </div>
 
 
-<!-- Article section end  -->
 
+
+<div>
+
+    <?php
+        // Include related posts template part
+        get_template_part('template-parts/single/related-posts');
+        ?>
+    </div>
+
+<!-- Article section end  -->
 
 <?php get_footer() ?>
