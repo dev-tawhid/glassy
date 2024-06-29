@@ -15,7 +15,7 @@ if ($categories) {
     $related_posts_args = array(
         'category__in' => $category_ids,
         'post__not_in' => array($current_post_id),
-        'posts_per_page' => 2, // Number of related posts to display
+        'posts_per_page' => 3, // Number of related posts to display
         'ignore_sticky_posts' => 1
     );
 
@@ -23,12 +23,12 @@ if ($categories) {
 
     if ($related_posts_query->have_posts()) {
         ?>
-        <div id="related-posts" class="article-section py-5">
+        <div id="related-posts" class="article-section pb-5">
             <div class="container">
                 <h2 class="related-posts-title mb-3 text-center"><?php esc_html_e('Related Articles', 'glassy'); ?></h2>
 
                 <div class="article-wrap">
-                    <div class="article-container row col-2">
+                    <div class="article-container row col-3">
                         <?php
                         while ($related_posts_query->have_posts()) {
                             $related_posts_query->the_post();
@@ -71,7 +71,7 @@ if ($categories) {
     } else {
         // If no related posts found based on categories, show most recent posts
         $fallback_posts_args = array(
-            'posts_per_page' => 2, // Number of recent posts to display as fallback
+            'posts_per_page' => 3, // Number of recent posts to display as fallback
             'ignore_sticky_posts' => 1
         );
 
@@ -79,12 +79,12 @@ if ($categories) {
 
         if ($fallback_posts_query->have_posts()) {
             ?>
-            <div id="related-posts" class="article-section py-5">
+            <div id="related-posts" class="article-section pb-5">
                 <div class="container">
                     <h2 class="related-posts-title mb-3 text-center"><?php esc_html_e('Related Articles', 'glassy'); ?></h2>
 
                     <div class="article-wrap">
-                        <div class="article-container row col-2">
+                        <div class="article-container row col-3">
                             <?php
                             while ($fallback_posts_query->have_posts()) {
                                 $fallback_posts_query->the_post();
