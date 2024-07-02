@@ -34,7 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Make hader last element as button 
 
-document.querySelector('#menu-primary-menu > li:last-child').classList.add('header-btn');
+document.querySelector('#nav-primary > li:last-child').classList.add('header-btn');
+
+
+// Preloader 
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('preloader').style.display = 'none';
+    }, 1000); // Adjust the delay (in milliseconds) as needed
+  });
 
 
 

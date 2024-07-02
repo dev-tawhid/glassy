@@ -4,53 +4,98 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-function glassy_theme_support(){
-    load_theme_textdomain('glassy');
-    add_theme_support('title-tag');
-    add_theme_support('custom-logo');
-    add_theme_support('post-thumbnails');
-    add_image_size('blog-img', 980, 551, true); // (width, height, crop)
 
-    $args = array(
-        'default-image'     => get_template_directory_uri() . '/assets/images/hero.jpg'
-    );
-    add_theme_support('custom-header', $args);
+// Glassy Theme Support Elements 
+
+function glassy_theme_support(){
+    // Load theme textdomain for translations
+    load_theme_textdomain('glassy');
+
+    // Add support for various WordPress features
+    add_theme_support('title-tag'); // Support for title tag
+    add_theme_support('custom-logo'); // Support for custom logo
+    add_theme_support('post-thumbnails'); // Support for post thumbnails
+    add_theme_support('menus'); // Support for menus
+
+    // Add support for HTML5 elements
+    add_theme_support('html5', array(
+        'comment-list', 
+        'comment-form', 
+        'search-form', 
+        'gallery', 
+        'caption'
+    ));
+
+    // Add support for align-wide and align-full in Gutenberg
+    add_theme_support('align-wide');
+
+    // Add support for responsive embeds
+    add_theme_support('responsive-embeds');
+
+    // Add support for block templates
+    add_theme_support('block-templates');
+
+    // Add support for editor styles
+    add_theme_support('editor-styles');
+    add_editor_style('assets/css/editor-style.css');
+
+    // Add support for custom header using a custom image size
+    add_theme_support('custom-header', array(
+        'default-image' => get_template_directory_uri() . '/assets/images/hero.jpg',
+        'width' => 1920, // Width of the glassy-fullscreen image size
+        'height' => 1080, // Height of the glassy-fullscreen image size
+        'flex-height' => true,
+        'flex-width' => true,
+    ));
+
+    // Add support for selective refresh for widgets
+    add_theme_support('customize-selective-refresh-widgets');
+
+
+  // Add custom image sizes for the "Glassy" theme
+    function glassy_custom_image_sizes() {
+        add_image_size('glassy-blog', 980, 551, true); // Blog image size
+        add_image_size('glassy-thumbnail', 150, 150, true); // Thumbnail size
+        add_image_size('glassy-medium', 300, 200, true); // Medium size
+        add_image_size('glassy-large', 1024, 768, true); // Large size
+        add_image_size('glassy-fullscreen', 1920, 1080, true); // Fullscreen size
+        add_image_size('glassy-portrait', 400, 600, true); // Portrait size
+    }
 }
 
 add_action('after_setup_theme', 'glassy_theme_support');
 
+// Glassy Theme Assets Managements
 
-function glassy_theme_assets(){
+function glassy_theme_assets() {
     // Theme version for versioning
     $theme_version = wp_get_theme()->get('Version');
 
-    // Google Fonts cdn
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', false);
+    // Google Fonts CDN
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', array(), null);
 
-    // Font awesome 
-
+    // Font Awesome
     wp_enqueue_style('font-awesome', get_theme_file_uri('/assets/fonts/font-awesome/css/all.css'), array(), filemtime(get_theme_file_path('/assets/fonts/font-awesome/css/all.css')));
 
-    // All theme css 
-
-    wp_enqueue_style('theme-css', get_theme_file_uri('/assets/css/theme.min.css'), array(), filemtime(get_theme_file_path('/assets/css/theme.min.css')));
+    // All theme CSS
+    wp_enqueue_style('glassy-theme-css', get_theme_file_uri('/assets/css/theme.min.css'), array(), filemtime(get_theme_file_path('/assets/css/theme.min.css')));
 
     // Main style.css with theme versioning
-    wp_enqueue_style('main-css', get_stylesheet_uri(), array(), $theme_version);
+    wp_enqueue_style('glassy-stylesheet', get_stylesheet_uri(), array(), $theme_version);
 
-    // JS files with versioning
+    // jQuery (included with WordPress)
     wp_enqueue_script('jquery');
-    wp_enqueue_script('theme-js', get_theme_file_uri('/assets/js/theme.js'), array(), filemtime(get_theme_file_path('/assets/js/theme.js')), true);
+
+    // Theme JS with versioning
+    wp_enqueue_script('glassy-theme-js', get_theme_file_uri('/assets/js/theme.js'), array('jquery'), filemtime(get_theme_file_path('/assets/js/theme.js')), true);
 }
 
 add_action('wp_enqueue_scripts', 'glassy_theme_assets', 11);
 
 
-function theme_prefix_custom_logo()
-{
-    // Check if the custom logo is set
+
+function theme_prefix_custom_logo(){
     if (has_custom_logo()) {
-        // Display the custom logo, which is automatically linked
         the_custom_logo();
     } else {
         // Display the default logo with a link to the home page
@@ -66,8 +111,8 @@ function theme_prefix_custom_logo()
 function glassy_register_menus(){
     
     register_nav_menus(array(
-        'primary' => 'Primary Menu'
-    ));
+        'primary' => esc_html__('Primary Menu', 'glassy')
+     ));
 }
 add_action('init', 'glassy_register_menus');
 
