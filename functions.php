@@ -119,12 +119,11 @@ add_action('init', 'glassy_register_menus');
 
 // Register sidebar 
 
-function glassy_register_sidebars()
-{
+function glassy_register_sidebars(){
     register_sidebar(array(
         'name'          => __('Main Sidebar', 'glassy'),
         'id'            => 'main-sidebar',
-        'description'   => __('Widgets in this area will be shown on the main sidebar.', 'theme-name'),
+        'description'   => __('Widgets in this area will be shown on the main sidebar.', 'glassy'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',

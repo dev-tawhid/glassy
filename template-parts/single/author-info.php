@@ -7,8 +7,9 @@ $author_avatar = get_avatar($author_id, 100); // 100 is the size of the avatar
 $author_name = get_the_author_meta('display_name');
 // Get author bio
 $author_bio = get_the_author_meta('description');
-// Get author title (assuming 'title' is a custom user meta field)
-$author_title = get_user_meta($author_id, 'title', true); // Change 'title' to your actual meta field key if different
+// Get author URL
+$author_url = get_author_posts_url($author_id); // Get the author's posts URL
+
 ?>
 
 <div class="author-info">
@@ -16,10 +17,7 @@ $author_title = get_user_meta($author_id, 'title', true); // Change 'title' to y
         <?php echo $author_avatar; ?>
     </div>
     <div class="author-details">
-        <h4><?php echo $author_name; ?></h4>
-        <?php if ($author_title) : ?>
-            <p class="author-title"><?php echo esc_html($author_title); ?></p>
-        <?php endif; ?>
+        <h4><a href="<?php echo esc_url($author_url); ?>"><?php echo esc_html($author_name); ?></a></h4>
         <?php if ($author_bio) : ?>
             <p class="author-bio"><?php echo esc_html($author_bio); ?></p>
         <?php endif; ?>

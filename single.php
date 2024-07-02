@@ -17,7 +17,7 @@ $sidebar_class = $has_active_main_sidebar ? 'right-sidebar' : 'no-sidebar';
             <div class="article-container row <?php echo $sidebar_class; ?>">
                 <?php while (have_posts()) {
                     the_post(); ?>
-                    <article <?php post_class('post-item'); ?>>
+                    <article >
 
                         <div class="post-content">
                         
@@ -30,6 +30,7 @@ $sidebar_class = $has_active_main_sidebar ? 'right-sidebar' : 'no-sidebar';
                             } else {
                                 get_template_part('template-parts/single/author-info');
                                 the_content();
+                                get_template_part('template-parts/single/post-navigation');
                                 comments_template();
                             }
                             ?>

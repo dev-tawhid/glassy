@@ -21,28 +21,27 @@ if ( ! comments_open() && get_comments_number() < 1 ) {
 
 <section id="comments" class="<?php echo esc_attr( $classes ); ?>">
     <?php if ( have_comments() ) : ?>
-        <h3 class="comments-title my-2">
+        <h4 class="comments-title my-2 text-center d-none">
             <?php
                 $comments_number = get_comments_number();
                 if ( '1' === $comments_number ) {
-                    /* translators: %s: post title */
-                    printf( _x( 'One Comment on &ldquo;%s&rdquo;', 'comments title', 'textdomain' ), get_the_title() );
+                    printf( _x( 'This post has 1 Comment', 'comments number', 'glassy' ) );
                 } else {
                     printf(
-                        /* translators: 1: number of comments, 2: post title */
+                        /* translators: %s: number of comments */
                         _nx(
-                            '%1$s Comment on &ldquo;%2$s&rdquo;',
-                            '%1$s Comments on &ldquo;%2$s&rdquo;',
+                            'This post has %1$s Comment',
+                            'This post has %1$s Comments',
                             $comments_number,
-                            'comments title',
-                            'textdomain'
+                            'comments number',
+                            'glassy'
                         ),
-                        number_format_i18n( $comments_number ),
-                        get_the_title()
+                        number_format_i18n( $comments_number )
                     );
                 }
             ?>
-        </h3>
+        </h4>
+
     <?php endif; ?>
     <?php
         wp_list_comments();

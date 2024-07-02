@@ -294,9 +294,9 @@
   margin-bottom: 15px;
 }
 
-#respond p {
-  margin-bottom: 15px;
-}
+// #respond p {
+//   margin-bottom: 15px;
+// }
 
 #respond .comment-form-comment textarea {
   width: 100%;
@@ -337,7 +337,7 @@
   display: flex;
   align-items: center;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
   margin-bottom: 20px;
   border-radius: 8px;
 }
@@ -353,6 +353,7 @@
 .author-details {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .author-title {
@@ -370,6 +371,50 @@
 
 #related-posts{
   background: #ffffff;
+}
+
+
+// Single Post Navigation style 
+
+.glassy-post-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.glassy-nav-previous,
+.glassy-nav-next {
+  width: 50%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.glassy-nav-previous span,
+.glassy-nav-next span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.glassy-nav-previous h4,
+.glassy-nav-next h4 {
+  margin: 0;
+  color: #25a4e1;
+
+}
+
+.glassy-nav-previous a,
+.glassy-nav-next a {
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.glassy-nav-previous a:hover,
+.glassy-nav-next a:hover {
+  // background-color: #333;
+  // color: #fff;
 }
 
 
