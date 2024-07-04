@@ -55,15 +55,9 @@ $sidebar_class = $has_active_main_sidebar ? 'right-sidebar' : 'no-sidebar';
 </div>
 
 
-
-
-<div>
-
-    <?php
-        // Include related posts template part
-        get_template_part('template-parts/single/related-posts');
-        ?>
-    </div>
+    <!-- <?php
+        // get_template_part('template-parts/single/related-posts');
+     ?> -->
 
 <!-- Article section end  -->
 
