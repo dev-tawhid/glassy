@@ -25,7 +25,11 @@
             </h1>
 
 
-              <?php glassy_breadcrumbs(); ?>
+              <!-- < ?php  glassy_breadcrumbs(); ?> -->
+
+              <?php if ( function_exists( 'glassy_breadcrumbs' ) ) {
+                    glassy_breadcrumbs();
+                } ?>
             
 
 
